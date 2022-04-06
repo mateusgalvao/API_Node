@@ -1,0 +1,26 @@
+{
+    "production": {
+      "mongo_ip": "127.0.0.1",
+      "mongo_port": "35109",
+      "mongo_collection": "suite",
+      "jest_suite": "suite_jest",
+      "suite_cod": 0,
+      "http_port": 80,
+      "https_port": 443,
+      "https_key": "/etc/asterisk/keys/opasuite.key",
+      "https_crt": "/etc/asterisk/keys/opasuite.crt",
+      "https_ca":  "/etc/asterisk/keys/opasuite_ca.crt"
+    },
+    "development": {
+      "mongo_ip": "127.0.0.1",
+      "mongo_port": "27017",
+      "mongo_collection": "suite",
+      "jest_suite": "suite_jest",
+      "suite_cod": 0,
+      "http_port": 80,
+      "https_port": 443,
+      "https_key": "/etc/asterisk/keys/opasuite.key",
+      "https_crt": "/etc/asterisk/keys/opasuite.crt",
+      "https_ca":  "/etc/asterisk/keys/opasuite_ca.crt"
+    }
+  }
