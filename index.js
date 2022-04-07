@@ -8,10 +8,6 @@ var cors = require('cors');
 const app = express();
 
 const routes = require('./routes/cliente.routes');
-mongoose.connect(`mongodb://${config.mongo_ip}:${config.mongo_port}/${config.mongo_collection}`,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
