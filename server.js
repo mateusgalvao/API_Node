@@ -1,8 +1,10 @@
 const express = require('express');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
+
+const connectDB = require('./server/database/con');
 
 const app = express();
 
@@ -14,7 +16,7 @@ app.use(morgan('tiny'));
 
 connectDB();
 
-app.use(bodyparser.urlencoded({ extended : true}))
+app.use(bodyParser.urlencoded({ extended : true}))
 
 app.set("view engine", "ejs")
 
@@ -26,6 +28,6 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/', require('./server/routes/router'))
 
 
-app.listen(3030, () => {
+app.listen(3010, () => {
     console.log('Servidor ok')
 });
