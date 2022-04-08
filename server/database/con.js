@@ -4,10 +4,8 @@ const connectDB = async () => {
     try{
         // mongodb connection string
         const con = await mongoose.connect('mongodb://localhost:27017/testemongoose', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
+            useNewUrlParser: true, 
+            useUnifiedTopology: true 
         })
 
         console.log(`MongoDB connected : ${con.connection.host}`);
