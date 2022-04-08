@@ -5,6 +5,7 @@ exports.create = (req,res)=>{
   // validate request
   if(!req.body){
       res.status(400).send({ message : "O conteúdo não pode estar vazio!"});
+      console.log(res)
   }else{
       console.log(req.body)
 
@@ -17,7 +18,8 @@ exports.create = (req,res)=>{
   })
  
   // save user in the database
-  user
+      user
+  
       .save(user)
       .then(data => {
           //res.send(data)
@@ -28,7 +30,7 @@ exports.create = (req,res)=>{
           res.status(500).send({
               message : err.message || "Ocorreu algum erro ao criar uma operação de criação"
           });
-      });}
+      })}
 
 }
 //recuperar e retornar todos os usuários/ recuperar e retornar um único usuário
