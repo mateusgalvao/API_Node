@@ -45,4 +45,6 @@ route.delete('/api/users/:id', controller.delete);
 //Update cliente 
 route.put('/api/users/:id', controller.update);
 
+route.post('/login', controller.createLogin);
+
 module.exports = route

@@ -1,15 +1,17 @@
 let Userdb = require('../model/model');
+const Usuario = require('../model/usuario');
+
 
 // cria e salva novo usuário
 exports.create = (req,res)=>{
   // validate request
-  if(!req.body){
-      res.status(400).send({ message : "O conteúdo não pode estar vazio!"});
-      console.log(res)
-  }else{
-      console.log(req.body)
+  const body = req.body;
+  res.json(body);
 
-  // new user
+  if(!body){
+      res.status(400).send({ message : "O conteúdo não pode estar vazio!"});
+  }else{
+        // new user
   const user = new Userdb({
       name : req.body.name,
       email : req.body.email,
@@ -73,6 +75,7 @@ exports.update = (req, res)=>{
   }
 
   const id = req.params.id;
+
   Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
       .then(data => {
           if(!data){
@@ -88,6 +91,7 @@ exports.update = (req, res)=>{
 
 // Excluir um usuário com o ID de usuário especificado na solicitação
 exports.delete = (req, res)=>{
+
   const id = req.params.id;
 
   Userdb.findByIdAndDelete(id)
@@ -105,4 +109,24 @@ exports.delete = (req, res)=>{
               message: "Não foi possível excluir o usuário com id=" + id
           });
       });
+}
+
+// Criar um registro de login
+exports.createLogin = async (req , res) =>{
+    try {
+        const credenciais = req.body;
+        
+        const usuario = await Usuario.findOne(credenciais);
+
+        if(usuario){
+            res.json({ error:false, usuario })
+        }else {
+            res.json({error:true, message:'Nenhum usuário encontrado'})
+        }
+
+    } catch (error) {
+        res.json({error:true, message: error.message})
+        
+    }
+
 }

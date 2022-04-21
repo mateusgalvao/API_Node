@@ -12,6 +12,8 @@ const conf = require('./config.json');
 const environment = process.env.NODE_ENV || 'production';
 const config = conf[environment];
 
+
+
 app.use(morgan('tiny'));
 
 connectDB();
@@ -25,7 +27,9 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 
-app.use('/', require('./server/routes/router'))
+app.use('/', require('./server/routes/router'));
+app.use('/usuario', require('./server/routes/router'))
+
 
 
 app.listen(3010, () => {
