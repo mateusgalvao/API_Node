@@ -112,21 +112,10 @@ exports.delete = (req, res)=>{
 }
 
 // Criar um registro de login
-exports.createLogin = async (req , res) =>{
-    try {
-        const credenciais = req.body;
-        
-        const usuario = await Usuario.findOne(credenciais);
-
-        if(usuario){
-            res.json({ error:false, usuario })
-        }else {
-            res.json({error:true, message:'Nenhum usuário encontrado'})
-        }
-
-    } catch (error) {
-        res.json({error:true, message: error.message})
-        
-    }
+exports.createLogin = (req , res) =>{
+    const body = req.body;
+    res.json(body);
+    res.json({ mensagem: 'Criar cadastro'})
+    
 
 }
