@@ -1,0 +1,128 @@
+html,body,h1,h2,h3,h4 {
+    font-family:"Lato", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag 
+{height:15px;width:15px;padding:0;margin-top:6px}                                                                                                                                                                                                                   
+
+html, body {
+    background: #2a36e3;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.container {
+    height: 100%;
+    margin-top: env(safe-area-inset-top);
+}
+
+#cabecalho {
+    text-align: right;
+}
+
+#cabecalho img {
+    width: 20px;
+    height: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+#cabecalho img.selected {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+}
+
+.corpo {
+    height: calc(100% - 28px);
+    display: flex;
+    flex-direction: column;
+}
+
+.corpo .logo {
+    color: white;
+    width: 80%;
+    margin: 48px auto;
+    align-self: center;
+    text-align: center;
+}
+
+.corpo .form {
+    color: white;
+    width: 100%;
+    align-self: center;
+    padding: 0px 50px;
+}
+
+.form input {
+    background: transparent;
+    width: 90%;
+    height: 25px;
+    border: 1px solid #ccc;  
+    padding-left: 1px;
+    margin: 10px 0;
+}
+
+.form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form .form-group label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form button {
+    padding: 4px 20px;
+}
+.envia{
+    text-align: right;
+    margin-top: 50px;
+}
+@media (min-width: 576px) {
+    .corpo {
+        flex-direction: column;
+        font-size: 16px;
+    }
+    .corpo .logo {
+        width: 80%;
+    }
+    .corpo .form {
+        width: 100%;
+        padding: 0px 50px;
+    }
+}
+@media (min-width: 768px) {
+    .corpo {
+        flex-direction: row;
+        font-size: 14px;
+    }
+    .corpo .logo {
+        width: 40%;
+        margin: 0px;
+    }
+    .corpo .form {
+        width: 60%;
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .envia{
+        text-align: left;
+        margin-top: 0px;
+    }
+}
+@media (min-width: 992px) {
+    .corpo {
+        font-size: 12px;
+    }
+    .corpo .logo {
+        width: 50%;
+    }
+    .corpo .form {
+        width: 50%;
+    }
+}
+

@@ -1,0 +1,54 @@
+<html lang="en"><head>
+    <link type="image/x-icon" rel="shortcut icon" href="/images/opasuite.svg">
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=0, viewport-fit=cover">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+
+    <title>Login</title>
+</head>
+<body>
+<div class="container">
+    
+    <div class="corpo">
+        <div class="logo"><img src="../assets/imagens/download.png" alt="Logo" style="width: 30%"></div>
+        <div class="form">
+            <form id="form"  method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group" id="div_username">
+                    <label for="username" id="label_username">E-mail</label>
+                    <input type="email" class="form-control" id="username" name="username" required="">
+                </div>
+                <div class="form-group" id="div_senha">
+                    <label for="username" id="label_senha">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" required="">
+                    <i style="color: rgb(93, 93, 105); float: right; margin-top: -23px; font-size: 13px;" id="olho" class="fa fa-eye-slash"></i>
+                </div>
+                <div style="float: right; margin-top: -20px;" id="div_manter-conectado">
+                    <input type="checkbox" id="manter-conectado">
+                    <label style="color: rgba(255, 255, 255, 0.5);">Manter Conectado</label>
+                </div>
+                <div class="form-group envia">
+                    <div class="row" style="margin-left: 1px">
+                        <button style="background: #061b34; border-color: #010108; color: #fff;" id="btn_login" type="submit" class="btn btn-warning">Acessar
+                        </button>
+                    </div>
+                    <p></p>
+
+                    <div class="row" style="margin-left: 1px">
+                        <a id="recuperar_senha" style="font-size: 11px; margin-top: 10px; cursor: pointer; color:inherit"><u>Esqueceu a
+                            senha? </u></a>
+                    </div>
+                </div>
+            </form>
+            <div>
+                
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body></html>
